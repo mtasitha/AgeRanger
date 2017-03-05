@@ -1,0 +1,58 @@
+﻿body {
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Custom Styles */
+@media(max-width:767px){
+    #personSearchBar{
+    }
+
+    #personSearchBar div[class^="col"]:first-child{
+        margin-bottom:15px !important;
+    }
+}
+@media(min-width:768px){
+    #personSearchBar{
+    }
+}
+@media(min-width:992px){
+    #personSearchBar{
+    }
+}
+@media(min-width:1200px){
+    #personSearchBar{
+    }
+}
+
+#personSearchBar{
+    margin-bottom:10px;
+}
+
+#personSearchBar .form-group {
+    margin-bottom:0;
+}
+
+#personListContainer h4{
+    color:#debb27;
+}
+
+#personListGroup > .row {
+    margin-left: 0;
+    margin-right:0;
+}
+
+.list-group-item h3{
+    font-size:20px;
+}
+
+.error{
+    color:red;
+}

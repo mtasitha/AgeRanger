@@ -1,0 +1,34 @@
+﻿<form name="personForm" data-ng-init="initEdit()" novalidate>
+    <!-- ID -->
+    <input type="hidden" name="id" ng-model="person.id" />
+
+    <!-- FIRST NAME -->
+    <div class="form-group" ng-class="{ 'has-error' : personForm.firstName.$dirty && personForm.firstName.$invalid && personForm.firstName.$error.required }">
+        <label for="firstname">First Name</label>
+        <input id="firstname" placeholder="First Name" type="text" name="firstName" ng-model="person.firstName" class="form-control" required ng-required="true" />
+        <label class="error" ng-show="personForm.firstName.$dirty && personForm.firstName.$invalid && personForm.firstName.$error.required">
+            First Name is required.
+        </label>
+    </div>
+
+    <!-- LAST NAME -->
+    <div class="form-group" ng-class="{ 'has-error' : personForm.lastName.$dirty && personForm.lastName.$invalid && personForm.lastName.$error.required }">
+        <label for="lastname">Last Name</label>
+        <input id="lastname" placeholder="Last Name" type="text" name="lastName" ng-model="person.lastName" class="form-control" required ng-required="true" />
+        <label class="error" ng-show="personForm.lastName.$dirty && personForm.lastName.$invalid && personForm.lastName.$error.required">
+            Last Name is required.
+        </label>
+    </div>
+
+    <!-- AGE -->
+    <div class="form-group" ng-class="{ 'has-error' : personForm.age.$dirty && personForm.age.$invalid && personForm.age.$error.required }">
+        <label for="age">Age</label>
+        <input id="age" placeholder="Age" type="number" name="age" ng-model="person.age" class="form-control" required ng-required="true" />
+        <label class="error" ng-show="personForm.age.$dirty && personForm.age.$invalid && personForm.age.$error.required">
+            Age is required.
+        </label>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" class="btn btn-primary" ng-click="editPerson(personForm.$valid)" ng-disabled="personForm.$invalid">Submit</button>
+</form>

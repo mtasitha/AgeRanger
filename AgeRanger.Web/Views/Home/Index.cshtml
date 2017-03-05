@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    ViewBag.InitModule = "ageRangerApp";
+}
+
+<div data-ng-view=""></div>
+
+@section scripts{
+    <script src="~/app/app.js"></script>
+    <script src="~/app/controllers/personController.js"></script>
+    <script src="~/app/controllers/ageGroupController.js"></script>
+}
