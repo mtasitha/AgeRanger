@@ -39,7 +39,7 @@ namespace AgeRanger.Web.Models
         }
         public IQueryable<Person> GetPersons(string SearchText)
         {
-            return _db.Persons.Where(p => p.FirstName.ToLower().Contains(SearchText.ToLower()) || p.LastName.Contains(SearchText.ToLower()) || string.IsNullOrEmpty(SearchText) || SearchText.ToLower() == "null").AsQueryable();
+            return _db.Persons.Where(p => p.FirstName.ToLower().Contains(SearchText.ToLower()) || p.LastName.ToLower().Contains(SearchText.ToLower()) || string.IsNullOrEmpty(SearchText) || SearchText.ToLower() == "null").AsQueryable();
         }
         public Person GetPerson(int id)
         {
